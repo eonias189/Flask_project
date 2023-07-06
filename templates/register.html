@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block content %}
+<article>
+    <h1>Регистрация</h1>
+    <form method="post" action="" class="register_form">
+        {{ form.hidden_tag() }}
+        <p>
+            {{ form.login.label }}<br>
+            {{ form.login(class="input_field") }}<br>
+            {% for error in form.login.errors %}
+            <strong>
+                {{ error }}
+            </strong>
+            {% endfor %}
+        </p>
+        <p>
+            {{ form.password.label }}<br>
+            {{ form.password(class="input_field") }}<br>
+            {% for error in form.password.errors %}
+            <strong>
+                {{ error }}
+            </strong>
+            {% endfor %}
+        </p>
+        <p>
+            {{ form.repeat_password.label }}<br>
+            {{ form.repeat_password(class="input_field") }}<br>
+            {% for error in form.repeat_password.errors %}
+            <strong>
+                {{ error }}
+            </strong>
+            {% endfor %}
+        </p>
+        <p>{{form.submit(type="submit", class="submit_button")}}</p>
+        {% if message %}
+        <p class="message">{{message}}</p>
+        {% endif %}
+    </form>
+</article>
+{% endblock %}

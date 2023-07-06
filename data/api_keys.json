@@ -1,0 +1,4 @@
+{
+  "register": "pbkdf2:sha256:260000$MjpYUPiU7Po0sHpf$3a25766cb03ffca9c8f824f3702db99904efccbb66f6d3872012735734da7cbd",
+  "login": "pbkdf2:sha256:260000$4fhytJdD7BSKiyj7$343e5753e071ee0e1e3a0c1fe94e88441c197df5edc89455cbb38bd73dc81d41"
+}

@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>{{title}}</title>
+    {% for css_url in css_styles %}
+    <link rel="stylesheet" href="{{css_url}}">
+    {% endfor %}
+</head>
+<body>
+<!--Тут что-то до содержимого конкретной страницы-->
+<header>
+    {% if user.is_authenticated %}
+    <p>Пользователь: {{user.login}}</p>
+    {% endif %}
+</header>
+<main role="main" class="container">
+    {% block content %}{% endblock %}
+</main>
+<!--Тут что-то после содержимого конкретной страницы-->
+</body>
+</html>
